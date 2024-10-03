@@ -1,0 +1,97 @@
+* {
+  margin: 0 auto;
+}
+.darkTheme {
+  background-color: rgb(43, 42, 42);
+}
+
+.darkGrey {
+  color: white;
+  text-align: center;
+  background-color: rgb(100, 100, 100);
+  border: none;
+  width: 72px;
+  height: 72px;
+}
+
+.darkGrey:hover,
+.darkGrey:active {
+  background-color: rgb(97, 96, 96);
+}
+
+.lightOrange {
+  color: white;
+  text-align: center;
+  background-color: rgb(250, 153, 9);
+  border: none;
+  width: 72px;
+  height: 72px;
+}
+
+.lightOrange:hover,
+.lightOrange:active {
+  background-color: rgb(224, 138, 9);
+}
+
+.lightGrey {
+  color: white;
+  text-align: center;
+  background-color: rgb(125, 125, 125);
+  border: none;
+  width: 72px;
+  height: 72px;
+}
+
+.lightGrey:hover,
+.lightGrey:active {
+  background-color: rgb(117, 117, 117);
+}
+
+.lightGreyLarge {
+  color: white;
+  text-align: center;
+  background-color: rgb(125, 125, 125);
+  border: none;
+  width: 148px;
+  height: 72px;
+}
+
+.lightGreyLarge:hover,
+.lightGreyLarge:active {
+  background-color: rgb(117, 117, 117);
+}
+
+.container {
+  padding: 200px 0;
+  margin: 0 auto;
+  box-sizing: border-box;
+
+  .calculator {
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    padding: 20px 0 0 0;
+    width: 300px;
+    height: 438px;
+    background: rgb(83, 83, 83);
+
+    #screen {
+      width: 280px;
+      height: 50px;
+      background: rgb(83, 83, 83);
+      border: none;
+      margin-bottom: 14px;
+    }
+
+    .btns {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+
+      p {
+        margin: 0;
+        font-size: 30px;
+      }
+    }
+  }
+}
