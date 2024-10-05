@@ -1,5 +1,5 @@
 import "./style.css";
-import "./lightDark.css";
+import "./themes.css";
 
 let screen = document.getElementById("screen");
 let numBtn = document.querySelectorAll(".numBtn");

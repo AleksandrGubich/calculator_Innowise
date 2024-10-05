@@ -37,6 +37,11 @@
       height: 50px;
       border: none;
       margin-bottom: 14px;
+      cursor: default;
+    }
+
+    #screen:focus {
+      outline: none;
     }
 
     .btns {
