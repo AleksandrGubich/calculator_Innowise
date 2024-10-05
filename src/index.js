@@ -20,35 +20,27 @@ numBtn.forEach((button) => {
   button.addEventListener("click", () => {
     if (isCalculated) {
       screen.value = "";
-      firstNum = "";
-      secondNum = "";
-      operatorSymbol = "";
       isCalculated = false;
     }
+
     screen.value += button.textContent;
   });
 });
 
 operator.forEach((button) => {
   button.addEventListener("click", () => {
-    if (isCalculated) {
-      secondNum = "";
-      operatorSymbol = "";
-      isCalculated = false;
-    }
-
-    if (operatorSymbol && secondNum) {
+    if (operatorSymbol && screen.value !== "") {
+      secondNum = screen.value;
       firstNum = calculate(firstNum, secondNum, operatorSymbol);
       screen.value = firstNum;
       secondNum = "";
-    }
-
-    if (!firstNum) {
+    } else {
       firstNum = screen.value;
     }
 
     operatorSymbol = button.textContent;
     screen.value = "";
+    isCalculated = false;
   });
 });
 
@@ -87,6 +79,7 @@ clear.addEventListener("click", () => {
   firstNum = "";
   secondNum = "";
   operatorSymbol = "";
+  isCalculated = false;
 });
 
 changeSymb.addEventListener("click", () => {
