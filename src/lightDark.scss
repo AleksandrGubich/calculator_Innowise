@@ -1,0 +1,147 @@
+//Тема калькулятора
+.calcDark {
+  background: rgb(83, 83, 83);
+}
+
+.calcLight {
+  background: rgb(187, 186, 186);
+}
+
+// Тема экрана
+.screenDark {
+  font-size: 40px;
+  color: white;
+  background: rgb(83, 83, 83);
+  display: flex;
+  text-align: end;
+}
+
+.screenLight {
+  font-size: 40px;
+  color: black;
+  background: rgb(187, 186, 186);
+  display: flex;
+  text-align: end;
+}
+
+//Тема Body
+.darkTheme {
+  background-color: rgb(43, 42, 42);
+}
+
+.lightTheme {
+  background-color: rgb(224, 220, 220);
+}
+
+//Темы кнопок
+.darkGrey {
+  color: white;
+  text-align: center;
+  background-color: rgb(100, 100, 100);
+  border: none;
+  width: 72px;
+  height: 72px;
+}
+
+.darkGrey:hover,
+.darkGrey:active {
+  background-color: rgb(97, 96, 96);
+}
+
+.darkGreyBright {
+  color: black;
+  text-align: center;
+  background-color: rgb(209, 208, 208);
+  border: none;
+  width: 72px;
+  height: 72px;
+}
+
+.darkGreyBright:hover,
+.darkGreyBright:active {
+  background-color: rgb(200, 200, 200);
+}
+
+.lightOrange {
+  color: white;
+  text-align: center;
+  background-color: rgb(250, 153, 9);
+  border: none;
+  width: 72px;
+  height: 72px;
+}
+
+.lightOrange:hover,
+.lightOrange:active {
+  background-color: rgb(224, 138, 9);
+}
+
+.lightOrangeBright {
+  color: black;
+  text-align: center;
+  background-color: rgb(250, 153, 9);
+  border: none;
+  width: 72px;
+  height: 72px;
+}
+
+.lightOrangeBright:hover,
+.lightOrangeBright:active {
+  background-color: rgb(224, 138, 9);
+}
+
+.lightGrey {
+  color: white;
+  text-align: center;
+  background-color: rgb(125, 125, 125);
+  border: none;
+  width: 72px;
+  height: 72px;
+}
+
+.lightGrey:hover,
+.lightGrey:active {
+  background-color: rgb(117, 117, 117);
+}
+
+.lightGreyBright {
+  color: black;
+  text-align: center;
+  background-color: rgb(156, 154, 154);
+  border: none;
+  width: 72px;
+  height: 72px;
+}
+
+.lightGreyBright:hover,
+.lightGreyBright:active {
+  background-color: rgb(140, 140, 140);
+}
+
+.lightGreyLarge {
+  color: white;
+  text-align: center;
+  background-color: rgb(125, 125, 125);
+  border: none;
+  width: 148px;
+  height: 72px;
+}
+
+.lightGreyLarge:hover,
+.lightGreyLarge:active {
+  background-color: rgb(117, 117, 117);
+}
+
+.lightGreyLargeBright {
+  color: black;
+  text-align: center;
+  background-color: rgb(156, 154, 154);
+  border: none;
+  width: 148px;
+  height: 72px;
+}
+
+.lightGreyLargeBright:hover,
+.lightGreyLargeBright:active {
+  background-color: rgb(140, 140, 140);
+}

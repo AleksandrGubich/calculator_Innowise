@@ -1,0 +1,43 @@
+.calcDark { background: #535353; }
+
+.calcLight { background: #bbbaba; }
+
+.screenDark { font-size: 40px; color: white; background: #535353; display: -webkit-box; display: -ms-flexbox; display: flex; text-align: end; }
+
+.screenLight { font-size: 40px; color: black; background: #bbbaba; display: -webkit-box; display: -ms-flexbox; display: flex; text-align: end; }
+
+.darkTheme { background-color: #2b2a2a; }
+
+.lightTheme { background-color: #e0dcdc; }
+
+.darkGrey { color: white; text-align: center; background-color: #646464; border: none; width: 72px; height: 72px; }
+
+.darkGrey:hover, .darkGrey:active { background-color: #616060; }
+
+.darkGreyBright { color: black; text-align: center; background-color: #d1d0d0; border: none; width: 72px; height: 72px; }
+
+.darkGreyBright:hover, .darkGreyBright:active { background-color: #c8c8c8; }
+
+.lightOrange { color: white; text-align: center; background-color: #fa9909; border: none; width: 72px; height: 72px; }
+
+.lightOrange:hover, .lightOrange:active { background-color: #e08a09; }
+
+.lightOrangeBright { color: black; text-align: center; background-color: #fa9909; border: none; width: 72px; height: 72px; }
+
+.lightOrangeBright:hover, .lightOrangeBright:active { background-color: #e08a09; }
+
+.lightGrey { color: white; text-align: center; background-color: #7d7d7d; border: none; width: 72px; height: 72px; }
+
+.lightGrey:hover, .lightGrey:active { background-color: #757575; }
+
+.lightGreyBright { color: black; text-align: center; background-color: #9c9a9a; border: none; width: 72px; height: 72px; }
+
+.lightGreyBright:hover, .lightGreyBright:active { background-color: #8c8c8c; }
+
+.lightGreyLarge { color: white; text-align: center; background-color: #7d7d7d; border: none; width: 148px; height: 72px; }
+
+.lightGreyLarge:hover, .lightGreyLarge:active { background-color: #757575; }
+
+.lightGreyLargeBright { color: black; text-align: center; background-color: #9c9a9a; border: none; width: 148px; height: 72px; }
+
+.lightGreyLargeBright:hover, .lightGreyLargeBright:active { background-color: #8c8c8c; }
