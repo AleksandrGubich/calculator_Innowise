@@ -91,12 +91,10 @@ percentage.addEventListener('click', () => {
 });
 
 decimal.addEventListener('click', () => {
-  // Если результат предыдущих вычислений, добавляем "0."
   if (isCalculated) {
-    screen.value = firstNum + '.'; // Используем результат и добавляем точку
-    isCalculated = false; // Сбрасываем флаг
+    screen.value = firstNum + '.';
+    isCalculated = false;
   } else {
-    // Добавляем точку, если её ещё нет в текущем числе
     if (!screen.value.includes('.')) {
       screen.value += '.';
     }
