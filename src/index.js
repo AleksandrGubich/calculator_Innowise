@@ -1,25 +1,25 @@
-import "./style.css";
-import "./themes.css";
+import './style.css';
+import './themes.css';
 
-let screen = document.getElementById("screen");
-let numBtn = document.querySelectorAll(".numBtn");
-let clear = document.querySelector(".clear");
-let changeSymb = document.querySelector(".changeSymb");
-let percentage = document.querySelector(".percentage");
-let operator = document.querySelectorAll(".operator");
-let decimal = document.querySelector(".decimal");
-let eqSymbol = document.querySelector(".eqSymbol");
-let changeThemeBtn = document.querySelector(".changeTheme");
+let screen = document.getElementById('screen');
+let numBtn = document.querySelectorAll('.numBtn');
+let clear = document.querySelector('.clear');
+let changeSymb = document.querySelector('.changeSymb');
+let percentage = document.querySelector('.percentage');
+let operator = document.querySelectorAll('.operator');
+let decimal = document.querySelector('.decimal');
+let eqSymbol = document.querySelector('.eqSymbol');
+let changeThemeBtn = document.querySelector('.changeTheme');
 
-let firstNum = "";
-let secondNum = "";
-let operatorSymbol = "";
+let firstNum = '';
+let secondNum = '';
+let operatorSymbol = '';
 let isCalculated = false;
 
 numBtn.forEach((button) => {
-  button.addEventListener("click", () => {
+  button.addEventListener('click', () => {
     if (isCalculated) {
-      screen.value = "";
+      screen.value = '';
       isCalculated = false;
     }
 
@@ -28,30 +28,30 @@ numBtn.forEach((button) => {
 });
 
 operator.forEach((button) => {
-  button.addEventListener("click", () => {
-    if (operatorSymbol && screen.value !== "") {
+  button.addEventListener('click', () => {
+    if (operatorSymbol && screen.value !== '') {
       secondNum = screen.value;
       firstNum = calculate(firstNum, secondNum, operatorSymbol);
       screen.value = firstNum;
-      secondNum = "";
+      secondNum = '';
     } else {
       firstNum = screen.value;
     }
 
     operatorSymbol = button.textContent;
-    screen.value = "";
+    screen.value = '';
     isCalculated = false;
   });
 });
 
-eqSymbol.addEventListener("click", () => {
+eqSymbol.addEventListener('click', () => {
   if (firstNum && operatorSymbol) {
     secondNum = screen.value;
     const result = calculate(firstNum, secondNum, operatorSymbol);
     screen.value = result;
     firstNum = result;
-    secondNum = "";
-    operatorSymbol = "";
+    secondNum = '';
+    operatorSymbol = '';
     isCalculated = true;
   }
 });
@@ -61,105 +61,112 @@ function calculate(num1, num2, operator) {
   num2 = parseFloat(num2);
 
   switch (operator) {
-    case "+":
+    case '+':
       return num1 + num2;
-    case "-":
+    case '-':
       return num1 - num2;
-    case "x":
+    case 'x':
       return num1 * num2;
-    case "÷":
-      return num2 !== 0 ? num1 / num2 : "Ошибка";
+    case '÷':
+      return num2 !== 0 ? num1 / num2 : 'Ошибка';
     default:
       return num1;
   }
 }
 
-clear.addEventListener("click", () => {
-  screen.value = "";
-  firstNum = "";
-  secondNum = "";
-  operatorSymbol = "";
+clear.addEventListener('click', () => {
+  screen.value = '';
+  firstNum = '';
+  secondNum = '';
+  operatorSymbol = '';
   isCalculated = false;
 });
 
-changeSymb.addEventListener("click", () => {
+changeSymb.addEventListener('click', () => {
   screen.value = -screen.value;
 });
 
-percentage.addEventListener("click", () => {
+percentage.addEventListener('click', () => {
   screen.value = screen.value / 100;
 });
 
-decimal.addEventListener("click", () => {
-  if (!screen.value.includes(".")) {
-    screen.value += ".";
+decimal.addEventListener('click', () => {
+  // Если результат предыдущих вычислений, добавляем "0."
+  if (isCalculated) {
+    screen.value = firstNum + '.'; // Используем результат и добавляем точку
+    isCalculated = false; // Сбрасываем флаг
+  } else {
+    // Добавляем точку, если её ещё нет в текущем числе
+    if (!screen.value.includes('.')) {
+      screen.value += '.';
+    }
   }
 });
 
 function themeChanger() {
   const body = document.body;
-  const screen = document.getElementById("screen");
-  const buttons = document.querySelectorAll(".btns button");
-  const calculator = document.querySelector(".calculator");
+  const screen = document.getElementById('screen');
+  const buttons = document.querySelectorAll('.btns button');
+  const calculator = document.querySelector('.calculator');
 
-  if (body.classList.contains("darkTheme")) {
-    body.classList.remove("darkTheme");
-    body.classList.add("lightTheme");
-    calculator.classList.remove("calcDark");
-    calculator.classList.add("calcLight");
-    screen.classList.remove("screenDark");
-    screen.classList.add("screenLight");
+  if (body.classList.contains('darkTheme')) {
+    body.classList.remove('darkTheme');
+    body.classList.add('lightTheme');
+    calculator.classList.remove('calcDark');
+    calculator.classList.add('calcLight');
+    screen.classList.remove('screenDark');
+    screen.classList.add('screenLight');
 
     buttons.forEach((button) => {
-      if (button.classList.contains("darkGrey")) {
-        button.classList.remove("darkGrey");
-        button.classList.add("darkGreyBright");
+      if (button.classList.contains('darkGrey')) {
+        button.classList.remove('darkGrey');
+        button.classList.add('darkGreyBright');
       }
 
-      if (button.classList.contains("lightGrey")) {
-        button.classList.remove("lightGrey");
-        button.classList.add("lightGreyBright");
+      if (button.classList.contains('lightGrey')) {
+        button.classList.remove('lightGrey');
+        button.classList.add('lightGreyBright');
       }
 
-      if (button.classList.contains("lightGreyLarge")) {
-        button.classList.remove("lightGreyLarge");
-        button.classList.add("lightGreyLargeBright");
+      if (button.classList.contains('lightGreyLarge')) {
+        button.classList.remove('lightGreyLarge');
+        button.classList.add('lightGreyLargeBright');
       }
 
-      if (button.classList.contains("lightOrange")) {
-        button.classList.remove("lightOrangeBright");
-        button.classList.add("lightOrangeBright");
+      if (button.classList.contains('lightOrange')) {
+        button.classList.remove('lightOrangeBright');
+        button.classList.add('lightOrangeBright');
       }
     });
   } else {
-    body.classList.remove("lightTheme");
-    body.classList.add("darkTheme");
-    calculator.classList.remove("calcLight");
-    calculator.classList.add("calcDark");
-    screen.classList.remove("screenLight");
-    screen.classList.add("screenDark");
+    body.classList.remove('lightTheme');
+    body.classList.add('darkTheme');
+    calculator.classList.remove('calcLight');
+    calculator.classList.add('calcDark');
+    screen.classList.remove('screenLight');
+    screen.classList.add('screenDark');
 
     buttons.forEach((button) => {
-      if (button.classList.contains("darkGreyBright")) {
-        button.classList.remove("darkGreyBright");
-        button.classList.add("darkGrey");
+      if (button.classList.contains('darkGreyBright')) {
+        button.classList.remove('darkGreyBright');
+        button.classList.add('darkGrey');
       }
 
-      if (button.classList.contains("lightGreyBright")) {
-        button.classList.remove("lightGreyBright");
-        button.classList.add("lightGrey");
+      if (button.classList.contains('lightGreyBright')) {
+        button.classList.remove('lightGreyBright');
+        button.classList.add('lightGrey');
       }
 
-      if (button.classList.contains("lightGreyLargeBright")) {
-        button.classList.remove("lightGreyLargeBright");
-        button.classList.add("lightGreyLarge");
+      if (button.classList.contains('lightGreyLargeBright')) {
+        button.classList.remove('lightGreyLargeBright');
+        button.classList.add('lightGreyLarge');
       }
-      if (button.classList.contains("lightOrangeBright")) {
-        button.classList.remove("lightOrangeBright");
-        button.classList.add("lightOrange");
+      if (button.classList.contains('lightOrangeBright')) {
+        button.classList.remove('lightOrangeBright');
+        button.classList.add('lightOrange');
       }
     });
   }
 }
 
-changeThemeBtn.addEventListener("click", themeChanger);
+changeThemeBtn.addEventListener('click', themeChanger);
