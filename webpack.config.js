@@ -7,6 +7,7 @@ module.exports = {
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
+    clean: true,
   },
 
   module: {
@@ -37,5 +38,5 @@ module.exports = {
     },
   },
 
-  mode: 'development',
+  mode: 'production',
 };
