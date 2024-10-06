@@ -91,8 +91,11 @@ percentage.addEventListener('click', () => {
 });
 
 decimal.addEventListener('click', () => {
+  const firstNumString = String(firstNum);
   if (isCalculated) {
-    screen.value = firstNum + '.';
+    if (!firstNumString.includes('.')) {
+      screen.value = firstNumString + '.';
+    }
     isCalculated = false;
   } else {
     if (!screen.value.includes('.')) {
